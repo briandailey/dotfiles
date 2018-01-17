@@ -1,0 +1,12 @@
+\set QUIET 1
+\pset null '[NULL]'
+\x auto
+\timing on
+\setenv LESS -imx4f
+
+\set HISTCONTROL ignorespace
+\set HISTFILE ~/.pqsl_history-:DBNAME
+\set HISTSIZE 20000
+\set COMP_KEYWORD_CASE upper
+
+\set PROMPT1 '%m:%/%# '
