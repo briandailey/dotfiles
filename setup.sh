@@ -1,3 +1,4 @@
 #/usr/bin/env bash
-ln -s ~/.dotfiles/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/.psqlrc ~/.psqlrc
+ln -s ~/.dotfiles/.bashrc ~
+ln -s ~/.dotfiles/.psqlrc ~
+ln -s ~/.dotfiles/.gitconfig ~
