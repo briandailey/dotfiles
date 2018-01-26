@@ -9,7 +9,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+
+call plug#end()
 
 " basics
 filetype plugin indent on
@@ -63,8 +66,7 @@ map <down> :bd<cr>
 
 " 256 color mode.
 set t_Co=256
-colorscheme monokai
-" colorscheme jellybeans
+colorscheme wombat256
 
 " highlight trailing whitespace so we catch it early.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
@@ -78,6 +80,7 @@ autocmd BufWinLeave * call clearmatches()
 " use fancy airline fonts
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
 
 "syntastic
 let g:syntastic_enable_signs=1
@@ -86,7 +89,7 @@ let g:syntastic_loc_list_height=2
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
-let g:syntastic_python_checkers = ['flake8', 'pyflakes']
+let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_stl_format = '%E{Err:%e}%B{ | }%W{Warn:%w}'
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list=0
