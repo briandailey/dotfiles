@@ -11,6 +11,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 
+call plug#end()
+
 " basics
 filetype plugin indent on
 set nocompatible
@@ -63,8 +65,7 @@ map <down> :bd<cr>
 
 " 256 color mode.
 set t_Co=256
-colorscheme monokai
-" colorscheme jellybeans
+colorscheme wombat256i
 
 " highlight trailing whitespace so we catch it early.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
