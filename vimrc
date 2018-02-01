@@ -66,7 +66,7 @@ map <down> :bd<cr>
 
 " 256 color mode.
 set t_Co=256
-colorscheme wombat256
+colorscheme wombat256i
 
 " highlight trailing whitespace so we catch it early.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
