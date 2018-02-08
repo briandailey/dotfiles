@@ -7,10 +7,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
+Plug 'mindriot101/vim-yapf'
 
 call plug#end()
 
@@ -82,42 +84,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
 
-"syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_loc_list_height=2
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
-let g:syntastic_python_checkers = ['pyflakes']
-let g:syntastic_stl_format = '%E{Err:%e}%B{ | }%W{Warn:%w}'
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list=0
-let g:syntastic_loc_list_height=3
-let g:syntastic_python_checker_args = "--max-complexity 13 --ignore=E501,E128"
-let g:syntastic_python_flake8_args = "--max-complexity 13 --ignore=E501,E128"
-let python_highlight_all = 1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-
-
-run SyntasticEnable ruby
-run SyntasticEnable eruby
-run SyntasticEnable c
-run SyntasticEnable cpp
-run SyntasticEnable coffee
-run SyntasticEnable css
-run SyntasticEnable cucumber
-run SyntasticEnable sass
-run SyntasticEnable haml
-run SyntasticEnable less
-run SyntasticEnable html
-run SyntasticEnable xhtml
-run SyntasticEnable javascript
-run SyntasticEnable sh
-run SyntasticEnable python
+" ALE linters
+ let g:ale_python_flake8_executable = 'python'
+ let g:ale_python_flake8_options = '-m flake8'
+ let g:ale_fixers = {
+             \  'javascript': ['prettier'],
+             \  'css': ['prettier']
+             \}
+let g:ale_fix_on_save = 1
+" Quickly navigate betwixt ale linting issues.
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:vim_markdown_folding_disabled=1
 
@@ -129,6 +108,5 @@ au FileType ruby,html,htm,php,xml,javascript setlocal softtabstop=2
 
 abbrev tablethrow (╯°□°)╯︵ ┻━┻
 
-" python3 from powerline.vim import setup as powerline_setup
-" python3 powerline_setup()
-" python3 del powerline_setup
+" When diffing, always be vertical.
+set diffopt+=vertical
