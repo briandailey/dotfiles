@@ -88,12 +88,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 " ALE linters
  let g:ale_python_flake8_executable = 'python'
- let g:ale_python_flake8_options = '-m flake8'
+ let g:ale_python_flake8_options = '-m flake8 --max-complexity 13 --ignore=E501,E128'
  let g:ale_fixers = {
              \  'javascript': ['prettier'],
              \  'css': ['prettier']
              \}
-let g:ale_fix_on_save = 1
+" don't lint while editing, only on load and save.
+let g:ale_lint_on_text_changed = 'never'
+
 " Quickly navigate betwixt ale linting issues.
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
