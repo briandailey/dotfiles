@@ -66,6 +66,12 @@ map <right> :bn<cr>
 map <left> :bp<cr>
 map <down> :bd<cr>
 
+" ignore node dirs.
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|node_modules)$',
+  \ 'file': '\v\.(pyc|swp)$',
+  \ }
+
 " 256 color mode.
 set t_Co=256
 colorscheme wombat256i
@@ -95,6 +101,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
              \}
 " don't lint while editing, only on load and save.
 let g:ale_lint_on_text_changed = 'never'
+let g:airline#extensions#ale#enabled = 1
 
 " Quickly navigate betwixt ale linting issues.
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
@@ -112,3 +119,9 @@ abbrev tablethrow (╯°□°)╯︵ ┻━┻
 
 " When diffing, always be vertical.
 set diffopt+=vertical
+
+" Folding!
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
