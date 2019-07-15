@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'mindriot101/vim-yapf'
+Plug 'ambv/black'
 
 call plug#end()
 

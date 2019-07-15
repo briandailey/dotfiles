@@ -1,6 +1,7 @@
 [user]
 	name = Brian Dailey
-	email = git@dailytechnology.net
+	email = brian@stratasan.com
+	signingkey = 0173C0E6925BB60170990616DE6AFD97AB27846D
 [color]
 	status = auto
 	diff = auto
@@ -9,13 +10,14 @@
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
 	co = checkout
-	ci = commit
+	ci = commit -S
 	st = status -s
 	wf = diff --color-words
 	up = "!git remote update -p; git merge --ff-only @{u}"
     mm = "!git merge master -m\"Merge master into \"`git rev-parse --abbrev-ref HEAD`"
 [core]
 	editor = /usr/bin/vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [github]
 	user = briandailey
 [push]

@@ -126,3 +126,6 @@ fi
 
 # Preview: https://dom.hastin.gs/files/bash-ps1/#!terminal=XFtcZVs0OTs5Mm1cXSQoX19naXRfcHMxICIgWyVzXSIpIFxbXGVbMzg7NTsxOTdtXF1cdyBcW1xlWzM4OzU7MTQxbVxdXCRcW1xlWzBtXF0g&blink-cursor=1&colours=256&cursor=pipe
 export PS1='\[\e[49;92m\]$(__git_ps1 " [%s]") \[\e[38;5;197m\]\w \[\e[38;5;141m\]\$\[\e[0m\] ';
+
+# Create a tmux session named after the current directory.
+alias ctmux='tmux new-s -s $(basename `pwd`)'
