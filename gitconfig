@@ -1,7 +1,7 @@
 [user]
 	name = Brian Dailey
-	email = brian@stratasan.com
-	signingkey = 0173C0E6925BB60170990616DE6AFD97AB27846D
+	email = brian@dailytechnology.net
+	signingKey = 3823F9185869CB2E
 [color]
 	status = auto
 	diff = auto
@@ -17,10 +17,11 @@
     mm = "!git merge master -m\"Merge master into \"`git rev-parse --abbrev-ref HEAD`"
 [core]
 	editor = /usr/bin/vim
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [github]
 	user = briandailey
 [push]
 	default = simple
 [gpg]
 	program = /usr/bin/gpg
+[commit]
+	gpgsign = true
