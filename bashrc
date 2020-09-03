@@ -69,6 +69,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# I like to start tunes from the shell.
+alias soma_fluid="mplayer http://ice2.somafm.com/fluid-128-mp3"
+alias soma_groove="mplayer http://ice5.somafm.com/groovesalad-256-mp3"
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
