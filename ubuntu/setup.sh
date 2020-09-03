@@ -2,4 +2,5 @@
 sudo apt install \
     vim \
     tmux \
-    git
+    git \
+    mplayer
