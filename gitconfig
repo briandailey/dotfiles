@@ -8,7 +8,7 @@
 [merge]
 	tool = vimdiff
 [alias]
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
 	co = checkout
 	ci = commit -S
 	st = status -s

@@ -133,3 +133,24 @@ export PS1='\[\e[49;92m\]$(__git_ps1 " [%s]") \[\e[38;5;197m\]\w \[\e[38;5;141m\
 
 # Create a tmux session named after the current directory.
 alias ctmux='tmux new-s -s $(basename `pwd`)'
+
+export GPG_TTY=$(tty)
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+# If pyenv is install, instatiate.
+if [[ -e $HOME/.pyenv ]]
+then
+    export PYENV_ROOT="$HOME/.pyenv"
+    eval "$(pyenv init -)"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+fi
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [[ -e $HOME/.tfenv ]]
+then
+    export PATH="$HOME/.tfenv/bin:$PATH"
+fi
