@@ -19,6 +19,7 @@ call plug#end()
 
 " basics
 filetype plugin indent on
+filetype plugin on
 set nocompatible
 set history=500
 " do not create backup file.
@@ -126,3 +127,6 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+
+" Markdown
+au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal tw=80 cc=80
