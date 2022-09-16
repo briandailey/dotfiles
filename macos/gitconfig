@@ -1,0 +1,27 @@
+[user]
+	name = Brian Dailey
+	email = brian@dailytechnology.net
+	signingKey = 09AA8EF8E38415F2
+[color]
+	status = auto
+	diff = auto
+[merge]
+	tool = vimdiff
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
+	co = checkout
+	ci = commit -S
+	st = status -s
+	wf = diff --color-words
+	up = "!git remote update -p; git merge --ff-only @{u}"
+    mm = "!git merge master -m\"Merge master into \"`git rev-parse --abbrev-ref HEAD`"
+[core]
+	editor = /usr/bin/vim
+[github]
+	user = briandailey
+[push]
+	default = simple
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+	gpgsign = true
