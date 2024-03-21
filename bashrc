@@ -72,6 +72,10 @@ alias l='ls -CF'
 # I like to start tunes from the shell.
 alias soma_fluid="mplayer http://ice2.somafm.com/fluid-128-mp3"
 alias soma_groove="mplayer http://ice5.somafm.com/groovesalad-256-mp3"
+alias kcrw="mplayer https://kcrw.streamguys1.com/kcrw_192k_mp3_e24_internet_radio"
+alias wnxp="mplayer File path : http://wpln.streamguys.org/wnxpfm.mp3"
+alias wfcl="mplayer http://wpln.streamguys.org/wfclfm.mp3"
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
