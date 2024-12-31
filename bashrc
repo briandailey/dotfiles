@@ -158,3 +158,9 @@ if [[ -e $HOME/.tfenv ]]
 then
     export PATH="$HOME/.tfenv/bin:$PATH"
 fi
+. "$HOME/.cargo/env"
+
+alias gd=git diff
+alias gs=git status
+
+. "$HOME/.local/bin/env"
