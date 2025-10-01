@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'mindriot101/vim-yapf'
-Plug 'ambv/black'
+Plug 'psf/black'
 
 call plug#end()
 
@@ -127,6 +127,4 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
-
-" Markdown
-au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal tw=80 cc=80
+set mouse=a
