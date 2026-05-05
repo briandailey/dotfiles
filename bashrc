@@ -37,3 +37,9 @@ export GPG_TTY=$(tty)
 
 alias gd='git diff'
 alias gs='git status'
+alias gmm='git fetch origin && git checkout master && git rebase origin/master'
+eval "$(starship init bash)"
+eval "$(fzf --bash)"
+
+export LD_LIBRARY_PATH=/opt/rocm-7.2.2/lib
+export PATH="$HOME/.local/bin:$PATH"
