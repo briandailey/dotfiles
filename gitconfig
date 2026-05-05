@@ -6,7 +6,7 @@
 	status = auto
 	diff = auto
 [merge]
-	tool = vimdiff
+    conflictStyle = zdiff3
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
 	co = checkout
@@ -17,12 +17,16 @@
     mm = "!git merge master -m\"Merge master into \"`git rev-parse --abbrev-ref HEAD`"
 [core]
 	editor = /usr/bin/vim
+    pager = delta
 [github]
 	user = briandailey
 [push]
 	default = simple
 [gpg]
-	program = /opt/homebrew/bin/gpg
+    # macos
+    # program = /opt/homebrew/bin/gpg
+    # ubuntu
+    program = /usr/bin/gpg
 [commit]
 	gpgsign = true
 [filter "lfs"]
@@ -30,3 +34,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection

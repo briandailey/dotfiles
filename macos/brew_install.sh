@@ -9,4 +9,5 @@ starship \
 duf \
 # https://github.com/eza-community/eza
 eza \
-git
+git \
+git-delta

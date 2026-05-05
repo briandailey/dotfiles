@@ -3,6 +3,7 @@ sudo apt install \
     vim \
     tmux \
     git \
+    git-delta \
     mplayer \
     curl \
     rhythmbox
