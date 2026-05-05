@@ -11,7 +11,7 @@ esac
 # some more ls aliases
 alias ll='eza -alF --icons'
 alias la='ls -A'
-alias l='ls -CF --icons'
+alias l='eza --icons'
 
 # I like to start tunes from the shell.
 alias soma_fluid="mplayer http://ice2.somafm.com/fluid-128-mp3"
@@ -35,5 +35,5 @@ alias ctmux='tmux new-s -s $(basename `pwd`)'
 
 export GPG_TTY=$(tty)
 
-alias gd=git diff
-alias gs=git status
+alias gd='git diff'
+alias gs='git status'
