@@ -10,4 +10,6 @@ duf \
 # https://github.com/eza-community/eza
 eza \
 git \
-git-delta
+git-delta \
+glow \
+git
