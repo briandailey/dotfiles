@@ -5,7 +5,9 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
@@ -14,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'mindriot101/vim-yapf'
 Plug 'psf/black'
+Plug 'wellle/context.vim'
 
 call plug#end()
 
@@ -128,3 +131,10 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set mouse=a
+
+" Disable copilot for Markdown.
+let g:copilot_filetypes = {
+    \ 'gitcommit': v:true,
+    \ 'markdown': v:false,
+    \ 'yaml': v:true
+    \ }
